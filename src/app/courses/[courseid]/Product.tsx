@@ -50,8 +50,8 @@ export default function Product({ amount }: Props) {
     setSuccess(false);
 
     try {
-      const { data: { key } } = await axios.get(`${process.env.NEXT_PUBLIC_WEB_URL}/api/getkey`);
-      const { data: { order } } = await axios.post(`${process.env.NEXT_PUBLIC_WEB_URL}/api/checkout/${amount}`);
+      const { data: { key } } = await axios.get(`${process.env.NEXT_PUBLIC_WEB_URL}/razorpay_getkey`);
+      const { data: { order } } = await axios.post(`${process.env.NEXT_PUBLIC_WEB_URL}/checkout?amount=${amount}`);
       setSuccess(true);
       console.log('Checkout successful');
 
@@ -85,7 +85,8 @@ export default function Product({ amount }: Props) {
         //     console.error("Error during payment verification:", error);
         //   }
         // },
-        "callback_url": `${process.env.NEXT_PUBLIC_WEB_URL}/api/paymentverification?userid=${user?.id}&useremail=${user?.emailAddresses[0].emailAddress}&usernumber=${user?.phoneNumbers[0].phoneNumber}&username=${user?.username}&courseid=${params.courseid}`,
+        // "callback_url": `${process.env.NEXT_PUBLIC_WEB_URL}/paymentverification?userid=${user?.id}&useremail=${user?.emailAddresses[0].emailAddress}&usernumber=${user?.phoneNumbers[0].phoneNumber}&username=${user?.username}&courseid=${params.courseid}`,
+        "callback_url": `${process.env.NEXT_PUBLIC_WEB_URL}/paymentverification`,
         prefill: {
           name: "Gaurav Kumar",
           email: "gaurav.kumar@example.com",
