@@ -85,7 +85,7 @@ export default function Product({ amount }: Props) {
         //     console.error("Error during payment verification:", error);
         //   }
         // },
-        "callback_url": `http://localhost:4000/api/paymentverification?userid=${user?.id}&useremail=${user?.emailAddresses[0].emailAddress}&usernumber=${user?.phoneNumbers[0].phoneNumber}&username=${user?.username}&courseid=${params.courseid}`,
+        "callback_url": `${process.env.NEXT_PUBLIC_WEB_URL}/api/paymentverification?userid=${user?.id}&useremail=${user?.emailAddresses[0].emailAddress}&usernumber=${user?.phoneNumbers[0].phoneNumber}&username=${user?.username}&courseid=${params.courseid}`,
         prefill: {
           name: "Gaurav Kumar",
           email: "gaurav.kumar@example.com",
