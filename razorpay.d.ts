@@ -6,7 +6,7 @@ interface RazorpayOptions {
     description: string;
     image: string;
     order_id: string;
-    callback_url: string;
+    // callback_url: string;
     prefill: {
         name: string;
         email: string;

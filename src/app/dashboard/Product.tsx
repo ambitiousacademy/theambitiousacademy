@@ -24,8 +24,8 @@ export default function Product({ amount }: Props) {
         setSuccess(false);
 
         try {
-            const { data: { key } } = await axios.get(`http://localhost:4000/api/getkey`);
-            const { data: { order } } = await axios.post(`http://localhost:4000/api/checkout/${amount}`);
+            const { data: { key } } = await axios.get(`${process.env.NEXT_PUBLIC_WEB_URL}/api/getkey`);
+            const { data: { order } } = await axios.post(`${process.env.NEXT_PUBLIC_WEB_URL}/api/checkout/${amount}`);
             setSuccess(true);
             console.log('Checkout successful');
 
@@ -37,21 +37,21 @@ export default function Product({ amount }: Props) {
                 description: "Test Transaction",
                 image: "https://example.com/your_logo",
                 order_id: order.id,
-                // handler: async function (response: RazorpayResponse) {
-                //     try {
-                //         const postData = {
-                //             paymentid: response.razorpay_payment_id,
-                //             orderid: response.razorpay_order_id,
-                //             signature: response.razorpay_signature
-                //         };
+                handler: async function (response: RazorpayResponse) {
+                    try {
+                        const postData = {
+                            paymentid: response.razorpay_payment_id,
+                            orderid: response.razorpay_order_id,
+                            signature: response.razorpay_signature
+                        };
             
-                //         const { data } = await axios.post("http://localhost:4000/api/paymentverification", postData);
-                //         console.log("Payment verification response:", data);
-                //     } catch (error) {
-                //         console.error("Error during payment verification:", error);
-                //     }
-                // },
-                "callback_url": "http://localhost:4000/api/paymentverification",
+                        const { data } = await axios.post("http://localhost:4000/api/paymentverification", postData);
+                        console.log("Payment verification response:", data);
+                    } catch (error) {
+                        console.error("Error during payment verification:", error);
+                    }
+                },
+                "callback_url": `${process.env.NEXT_PUBLIC_WEB_URL}/api/paymentverification`,
                 prefill: {
                     name: "Gaurav Kumar",
                     email: "gaurav.kumar@example.com",

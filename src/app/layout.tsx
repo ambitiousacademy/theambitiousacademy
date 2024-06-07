@@ -9,6 +9,8 @@ import {
   UserButton
 } from '@clerk/nextjs'
 import Script from "next/script";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,13 +29,9 @@ export default function RootLayout({
     <html lang='en'>
     <Script src="https://checkout.razorpay.com/v1/checkout.js" />
       <body>
-        <SignedOut>
-          <SignInButton />
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
+        <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   </ClerkProvider>
