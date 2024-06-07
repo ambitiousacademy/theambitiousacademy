@@ -1,11 +1,13 @@
-export default function Footer(){
+import Image from "next/image";
+
+ export default function Footer(){
     return (
         <>
         <section className="py-16 bg-black overflow-hidden p-10">
   <div className="container mx-auto px-4">
     <div className="flex flex-wrap lg:items-center -m-6">
       <div className="w-full md:w-auto p-6">
-        <img src="https://dummyimage.com/60x60" alt=""/>
+        <Image src="https://dummyimage.com/60x60" alt=""/>
       </div>
       <div className="w-full md:w-1/2 p-6">
         <ul className="flex flex-wrap -m-5">

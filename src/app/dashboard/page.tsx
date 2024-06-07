@@ -1,5 +1,6 @@
 import { currentUser } from '@clerk/nextjs/server';
 import Product from './Product';
+import Image from 'next/image';
 
 export default async function Dashboard() {
     const user = await currentUser();
@@ -13,7 +14,7 @@ export default async function Dashboard() {
       <div className="flex flex-wrap -mx-4">
          <div className="w-full md:w-1/2 xl:w-1/3 px-4">
             <div className="bg-white rounded-lg overflow-hidden mb-10">
-               <img
+               <Image
                   src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
                   alt="image"
                   className="w-full"
@@ -63,7 +64,7 @@ export default async function Dashboard() {
          </div>
          <div className="w-full md:w-1/2 xl:w-1/3 px-4">
             <div className="bg-white rounded-lg overflow-hidden mb-10">
-               <img
+               <Image
                   src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg"
                   alt="image"
                   className="w-full"
@@ -113,7 +114,7 @@ export default async function Dashboard() {
          </div>
          <div className="w-full md:w-1/2 xl:w-1/3 px-4">
             <div className="bg-white rounded-lg overflow-hidden mb-10">
-               <img
+               <Image
                   src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg"
                   alt="image"
                   className="w-full"

@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -33,7 +34,7 @@ const Reviews = () => {
         <div className="flex-shrink-0">
             <div className="relative inline-block">
                 <a href="#" className="relative block">
-                    <img alt="profil" src="/images/person/1.jpg" className="mx-auto object-cover rounded-full h-16 w-16 "/>
+                    <Image alt="profil" src="/images/person/1.jpg" className="mx-auto object-cover rounded-full h-16 w-16 "/>
                 </a>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="absolute bottom-0 right-0 w-6 h-6 p-1 -mx-1 -my-1 text-white bg-green-600 rounded-full fill-current">
                     <path d="M19 11a7.5 7.5 0 0 1-3.5 5.94L10 20l-5.5-3.06A7.5 7.5 0 0 1 1 11V3c3.38 0 6.5-1.12 9-3 2.5 1.89 5.62 3 9 3v8zm-9 1.08l2.92 2.04-1.03-3.41 2.84-2.15-3.56-.08L10 5.12 8.83 8.48l-3.56.08L8.1 10.7l-1.03 3.4L10 12.09z">
@@ -86,7 +87,7 @@ const Reviews = () => {
         <div className="flex-shrink-0">
             <div className="relative inline-block">
                 <a href="#" className="relative block">
-                    <img alt="profil" src="/images/person/1.jpg" className="mx-auto object-cover rounded-full h-16 w-16 "/>
+                    <Image alt="profil" src="/images/person/1.jpg" className="mx-auto object-cover rounded-full h-16 w-16 "/>
                 </a>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="absolute bottom-0 right-0 w-6 h-6 p-1 -mx-1 -my-1 text-white bg-green-600 rounded-full fill-current">
                     <path d="M19 11a7.5 7.5 0 0 1-3.5 5.94L10 20l-5.5-3.06A7.5 7.5 0 0 1 1 11V3c3.38 0 6.5-1.12 9-3 2.5 1.89 5.62 3 9 3v8zm-9 1.08l2.92 2.04-1.03-3.41 2.84-2.15-3.56-.08L10 5.12 8.83 8.48l-3.56.08L8.1 10.7l-1.03 3.4L10 12.09z">
@@ -138,7 +139,7 @@ const Reviews = () => {
         <div className="flex-shrink-0">
             <div className="relative inline-block">
                 <a href="#" className="relative block">
-                    <img alt="profil" src="/images/person/1.jpg" className="mx-auto object-cover rounded-full h-16 w-16 "/>
+                    <Image alt="profil" src="/images/person/1.jpg" className="mx-auto object-cover rounded-full h-16 w-16 "/>
                 </a>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="absolute bottom-0 right-0 w-6 h-6 p-1 -mx-1 -my-1 text-white bg-green-600 rounded-full fill-current">
                     <path d="M19 11a7.5 7.5 0 0 1-3.5 5.94L10 20l-5.5-3.06A7.5 7.5 0 0 1 1 11V3c3.38 0 6.5-1.12 9-3 2.5 1.89 5.62 3 9 3v8zm-9 1.08l2.92 2.04-1.03-3.41 2.84-2.15-3.56-.08L10 5.12 8.83 8.48l-3.56.08L8.1 10.7l-1.03 3.4L10 12.09z">
@@ -190,7 +191,7 @@ const Reviews = () => {
         <div className="flex-shrink-0">
             <div className="relative inline-block">
                 <a href="#" className="relative block">
-                    <img alt="profil" src="/images/person/1.jpg" className="mx-auto object-cover rounded-full h-16 w-16 "/>
+                    <Image alt="profil" src="/images/person/1.jpg" className="mx-auto object-cover rounded-full h-16 w-16 "/>
                 </a>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="absolute bottom-0 right-0 w-6 h-6 p-1 -mx-1 -my-1 text-white bg-green-600 rounded-full fill-current">
                     <path d="M19 11a7.5 7.5 0 0 1-3.5 5.94L10 20l-5.5-3.06A7.5 7.5 0 0 1 1 11V3c3.38 0 6.5-1.12 9-3 2.5 1.89 5.62 3 9 3v8zm-9 1.08l2.92 2.04-1.03-3.41 2.84-2.15-3.56-.08L10 5.12 8.83 8.48l-3.56.08L8.1 10.7l-1.03 3.4L10 12.09z">

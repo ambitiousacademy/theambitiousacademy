@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Ourservices = () => {
@@ -9,7 +10,7 @@ const Ourservices = () => {
       <div className="flex flex-wrap -m-4 mb-20">
         <div className="w-full lg:w-1/3 p-4">
           <div className="border border-gray-200 p-12 rounded-3xl h-full">
-            <img className="mb-12 h-20" src="https:/shuffle.dev/consulty-assets/services/card-picture1.svg" alt=""/>
+            <Image className="mb-12 h-20" src="https:/shuffle.dev/consulty-assets/services/card-picture1.svg" alt=""/>
             <p className="text-xl tracking-tight font-semibold mb-4">Commercial</p>
             <p className="text-gray-700 tracking-tight mb-12">Established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
             <a href="#" className="bg-black h-14 w-full rounded-full px-5 py-3 inline-flex items-center justify-center gap-2 tracking-tight hover:bg-orange-600 focus:bg-orange-500 focus:ring-4 focus:ring-orange-200 transition duration-200">
@@ -22,7 +23,7 @@ const Ourservices = () => {
         </div>
         <div className="w-full lg:w-1/3 p-4">
           <div className="border border-gray-200 p-12 rounded-3xl h-full">
-            <img className="mb-12 h-20" src="https:/shuffle.dev/consulty-assets/services/card-picture1.svg" alt=""/>
+            <Image className="mb-12 h-20" src="https:/shuffle.dev/consulty-assets/services/card-picture1.svg" alt=""/>
             <p className="text-xl tracking-tight font-semibold mb-4">Commercial</p>
             <p className="text-gray-700 tracking-tight mb-12">Established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
             <a href="#" className="bg-black h-14 w-full rounded-full px-5 py-3 inline-flex items-center justify-center gap-2 tracking-tight hover:bg-orange-600 focus:bg-orange-500 focus:ring-4 focus:ring-orange-200 transition duration-200">
@@ -35,7 +36,7 @@ const Ourservices = () => {
         </div>
         <div className="w-full lg:w-1/3 p-4">
           <div className="border border-gray-200 p-12 rounded-3xl h-full">
-            <img className="mb-12 h-20" src="https:/shuffle.dev/consulty-assets/services/card-picture1.svg" alt=""/>
+            <Image className="mb-12 h-20" src="https:/shuffle.dev/consulty-assets/services/card-picture1.svg" alt=""/>
             <p className="text-xl tracking-tight font-semibold mb-4">Commercial</p>
             <p className="text-gray-700 tracking-tight mb-12">Established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
             <a href="#" className="bg-black h-14 w-full rounded-full px-5 py-3 inline-flex items-center justify-center gap-2 tracking-tight hover:bg-orange-600 focus:bg-orange-500 focus:ring-4 focus:ring-orange-200 transition duration-200">

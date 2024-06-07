@@ -1,4 +1,3 @@
-"use client"
 import Product from "./Product";
 
 export default async function Courses(){
