@@ -63,30 +63,30 @@ export default function Product({ amount }: Props) {
         description: "Test Transaction",
         image: "https://example.com/your_logo",
         order_id: order.id,
-        // handler: async function (response: RazorpayResponse) {
-        //   try {
-        //     const postData = {
-        //       razorpay_payment_id: response.razorpay_payment_id,
-        //       razorpay_order_id: response.razorpay_order_id,
-        //       razorpay_signature: response.razorpay_signature,
-        //       userid: user?.id,
-        //       useremail:  user?.emailAddresses[0].emailAddress,
-        //       usernumber:  user?.phoneNumbers[0].phoneNumber,
-        //       username: user?.username
-        //     };
+        handler: async function (response: RazorpayResponse) {
+          try {
+            const postData = {
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_signature: response.razorpay_signature,
+              userid: user?.id,
+              useremail:  user?.emailAddresses[0].emailAddress,
+              usernumber:  user?.phoneNumbers[0].phoneNumber,
+              username: user?.username
+            };
 
-        //     const { data } = await axios.post("http://localhost:4000/api/paymentverification", postData, {
-        //       headers: {
-        //           'Content-Type': 'application/json'
-        //       }
-        //   });
-        //     console.log("Payment verification response:", data);
-        //   } catch (error) {
-        //     console.error("Error during payment verification:", error);
-        //   }
-        // },
+            const { data } = await axios.post(`${process.env.NEXT_PUBLIC_WEB_URL}/paymentverification`, postData, {
+              headers: {
+                  'Content-Type': 'application/json'
+              }
+          });
+            console.log("Payment verification response:", data);
+          } catch (error) {
+            console.error("Error during payment verification:", error);
+          }
+        },
         // "callback_url": `${process.env.NEXT_PUBLIC_WEB_URL}/paymentverification?userid=${user?.id}&useremail=${user?.emailAddresses[0].emailAddress}&usernumber=${user?.phoneNumbers[0].phoneNumber}&username=${user?.username}&courseid=${params.courseid}`,
-        "callback_url": `${process.env.NEXT_PUBLIC_WEB_URL}/paymentverification`,
+        // "callback_url": `${process.env.NEXT_PUBLIC_WEB_URL}/paymentverification`,
         prefill: {
           name: "Gaurav Kumar",
           email: "gaurav.kumar@example.com",
