@@ -2,13 +2,13 @@ import React from 'react'
 
 const Benefits = () => {
   return (
-    <div><section className="py-32 bg-white overflow-hidden">
+    <div><section className="pt-32 bg-white overflow-hidden">
     <div className="container px-4 mx-auto">
       <div className="flex flex-wrap -m-8">
-        <div className="w-full md:w-1/2 p-8">
+        <div className="p-20 w-full md:w-1/2 p-8">
           <div className="md:max-w-lg">
-            <h2 className="mb-5 text-6xl md:text-7xl font-bold font-heading tracking-px-n leading-tight">All-in-one, next-gen SaaS experience</h2>
-            <p className="text-gray-600 font-medium leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat tempor condimentum commodo tincidunt sit dictumst. Eu placerat arcu at sem vitae eros.</p>
+            <h2 className="mb-5 text-6xl md:text-7xl font-bold font-heading tracking-px-n leading-tight">Our Services</h2>
+            <p className="text-gray-600 font-medium leading-relaxed">At The Ambitious Academy, we are dedicated to providing comprehensive support to law students and professionals. Our services include:</p>
           </div>
         </div>
         <div className="w-full md:w-1/2 p-8">
@@ -22,13 +22,19 @@ const Benefits = () => {
                         <path d="M11.4375 7.83333V19.75M11.4375 7.83333C11.4375 7.83333 11.4375 6.46495 11.4375 6C11.4375 4.98748 12.2583 4.16667 13.2708 4.16667C14.2834 4.16667 15.1042 4.98748 15.1042 6C15.1042 7.01252 14.2834 7.83333 13.2708 7.83333C12.7233 7.83333 11.4375 7.83333 11.4375 7.83333ZM11.4375 7.83333C11.4375 7.83333 11.4375 6.05767 11.4375 5.54167C11.4375 4.27601 10.4115 3.25 9.14583 3.25C7.88018 3.25 6.85417 4.27601 6.85417 5.54167C6.85417 6.80732 7.88018 7.83333 9.14583 7.83333C9.89548 7.83333 11.4375 7.83333 11.4375 7.83333ZM5.02083 11.5H17.8542M5.02083 11.5C4.00831 11.5 3.1875 10.6792 3.1875 9.66667C3.1875 8.65414 4.00831 7.83333 5.02083 7.83333H17.8542C18.8667 7.83333 19.6875 8.65414 19.6875 9.66667C19.6875 10.6792 18.8667 11.5 17.8542 11.5M5.02083 11.5L5.02083 17.9167C5.02083 18.9292 5.84164 19.75 6.85417 19.75H16.0208C17.0334 19.75 17.8542 18.9292 17.8542 17.9167V11.5" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                     </div>
+
+
+
+
+
+
                   </div>
                   <div className="w-px h-28 bg-blueGray-200 mx-auto"></div>
                 </div>
                 <div className="flex-1 p-7">
                   <div className="md:max-w-sm pb-8">
-                    <h3 className="mb-4 text-xl font-semibold leading-normal">Shop Better</h3>
-                    <p className="text-gray-600 font-medium leading-relaxed">Lorem ipsum dolor sit amet, to the consectetur adipiscing elit. Volutpat tempor condim.</p>
+                    <h3 className="mb-4 text-xl font-semibold leading-normal">Test Series</h3>
+                    <p className="text-gray-600 font-medium leading-relaxed">Enhance your preparation with our meticulously designed test series.</p>
                   </div>
                 </div>
               </div>
@@ -47,8 +53,8 @@ const Benefits = () => {
                 </div>
                 <div className="flex-1 p-7">
                   <div className="md:max-w-sm pb-8">
-                    <h3 className="mb-4 text-xl font-semibold leading-normal">Pay Better</h3>
-                    <p className="text-gray-600 font-medium leading-relaxed">Lorem ipsum dolor sit amet, to the consectetur adipiscing elit. Volutpat tempor condimentum. Volutpat tempor condiment adipiscing.</p>
+                    <h3 className="mb-4 text-xl font-semibold leading-normal">Study Material</h3>
+                    <p className="text-gray-600 font-medium leading-relaxed">Access a rich repository of study materials crafted by experts in the field.</p>
                   </div>
                 </div>
               </div>
@@ -67,8 +73,8 @@ const Benefits = () => {
                 </div>
                 <div className="flex-1 p-7">
                   <div className="md:max-w-sm pb-8">
-                    <h3 className="mb-4 text-xl font-semibold leading-normal">Track Better</h3>
-                    <p className="text-gray-600 font-medium leading-relaxed">Lorem ipsum dolor sit amet, to the consectetur adipiscing elit. Volutpat tempor condimentum. Lorem ipsum dolor sit amet.</p>
+                    <h3 className="mb-4 text-xl font-semibold leading-normal">Webinars</h3>
+                    <p className="text-gray-600 font-medium leading-relaxed">Stay updated with the latest developments in law through our engaging webinars.</p>
                   </div>
                 </div>
               </div>

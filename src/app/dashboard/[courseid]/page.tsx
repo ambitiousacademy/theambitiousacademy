@@ -32,7 +32,7 @@ export default function DashboardCourse() {
     const fetchData = async () => {
       if (user?.id) {
         const res = await fetch(
-          `http://localhost:4000/api/protectedcourselinks?userid=${user.id}&courseid=${courseid}`
+          `${process.env.NEXT_PUBLIC_WEB_URL}/protectedCourses?userid=${user.id}&courseid=${courseid}`
         );
         const data: CourseData = await res.json();
         setCoursedata(data);

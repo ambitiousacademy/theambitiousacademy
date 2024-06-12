@@ -33,7 +33,7 @@ const Navbar = () => {
                         <Link href="/contact-us">Contact Us</Link>
                       </div>
                       <div className="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <Link href="/courses">Courses</Link>
+                        <Link href="/dashboard">Dashboard</Link>
                       </div>
                       {isSignedIn && (
                         <button onClick={() => signOut({ redirectUrl: '/' })} className="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -113,7 +113,7 @@ const Navbar = () => {
                     <Link href="/contact-us">Contact Us</Link>
                   </div>
                   <div className="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    <Link href="/courses">Courses</Link>
+                    <Link href="/dashboard">Dashboard</Link>
                   </div>
                   {isSignedIn && (
                     <button onClick={() => signOut({ redirectUrl: '/' })} className="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">

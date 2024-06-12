@@ -1,44 +1,41 @@
 "use client"
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import Image from "next/image";
+import React from 'react';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
-export default function HeaderSection() {
-    return (
-        <>
-            {/* <section className="pb-20 m-10">
-                <div className="container px-4 mx-auto pt-12">
-                    <div className="flex flex-wrap items-center -mx-4">
-                        <div className="w-full md:w-1/2 px-4 mb-6 md:mb-0">
-                            <span className="font-semibold text-xs text-blue-400">Lorem ipsum dolor sit.</span>
-                            <h2 className="mt-8 mb-6 lg:mb-12 text-4xl lg:text-5xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, iste perspiciatis?</h2>
-                            <div className="max-w-lg mb-6 lg:mb-12">
-                                <p className="text-xl text-gray-500">Build a well-presented brand that everyone will love. Take care to develop resources continually and integrity them with previous projects.</p>
-                            </div>
-                            <div className="flex flex-wrap"><a className="inline-block px-6 py-4 mb-3 mr-4 text-sm font-medium leading-normal bg-red-400 hover:bg-red-300 text-white rounded transition duration-200" href="#">Sign In</a><a className="inline-block px-6 py-4 mb-3 text-sm font-medium leading-normal hover:text-gray-700 rounded border" href="#">Sign Up</a></div>
+export default class extends React.Component {
+    render() {
+        return (
+            <CarouselProvider
+                naturalSlideWidth={100}
+                naturalSlideHeight={40}
+                totalSlides={3}
+                isPlaying={true}
+                infinite={true}
+                interval={2000}
+
+            >
+                <Slider>
+                    <Slide index={0}>
+                        <div>
+                            <Image src="https://plus.unsplash.com/premium_photo-1661497281000-b5ecb39a2114?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" fill />
                         </div>
-                        <div className="relative w-full md:w-1/2 px-4">
-                            <img className="hidden lg:block lg:absolute top-0 right-0 z-10 lg:mt-28" src="https://shuffle.dev/zeus-assets/icons/dots/yellow-dot-right-shield.svg" alt=""/>
-                                <img className="relative" src="https://shuffle.dev/zeus-assets/images/z-picture.png" alt=""/>
-                                    <img className="hidden lg:block lg:absolute bottom-0 lg:left-0 lg:ml-6 lg:mb-20" src="https://shuffle.dev/zeus-assets/icons/dots/blue-dot-left-bars.svg" alt=""/>
-                                    </div>
-                                </div>
+                    </Slide>
+                    <Slide index={1}>
+                        <div>
+                            <Image src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" fill />
                         </div>
-                    </section> */}
-                    <Carousel infiniteLoop={true} autoFocus={true} autoPlay={true}>
-                <div>
-                    <Image src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1722&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""/>
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div>
-                    <Image src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""/>
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <Image src="https://plus.unsplash.com/premium_photo-1682787494765-44d02d12f5be?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""/>
-                    <p className="legend">Legend 3</p>
-                </div>
-            </Carousel>
-                </>
-                )
+                    </Slide>
+                    <Slide index={2}>
+                        <div>
+                            <Image src="https://plus.unsplash.com/premium_photo-1682787494765-44d02d12f5be?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" fill />
+                        </div>
+                    </Slide>
+                </Slider>
+                {/* <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext> */}
+            </CarouselProvider>
+        );
+    }
 }

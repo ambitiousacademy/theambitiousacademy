@@ -7,7 +7,7 @@ import Image from "next/image";
   <div className="container mx-auto px-4">
     <div className="flex flex-wrap lg:items-center -m-6">
       <div className="w-full md:w-auto p-6">
-        <Image src="https://dummyimage.com/60x60" alt=""/>
+        <Image src="https://dummyimage.com/60x60" alt="" width={0} height={0}/>
       </div>
       <div className="w-full md:w-1/2 p-6">
         <ul className="flex flex-wrap -m-5">

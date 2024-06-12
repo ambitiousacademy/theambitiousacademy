@@ -32,28 +32,28 @@ export default function Ourteam(){
       <div className="flex flex-wrap -mx-4 -mb-12">
         <div className="w-full md:w-1/2 xl:w-1/4 px-4 mb-12">
           <div className="max-w-xs md:max-w-none mx-auto">
-            <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt=""/>
+            <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt="" width={0} height={0}/>
             <h5 className="text-2xl font-semibold text-gray-900 mb-2">Rakabuming Suhu</h5>
             <span className="text-gray-500">Founder, CTO</span>
           </div>
         </div>
         <div className="w-full md:w-1/2 xl:w-1/4 px-4 mb-12">
           <div className="max-w-xs md:max-w-none mx-auto">
-            <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt=""/>
+            <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt="" width={0} height={0}/>
             <h5 className="text-2xl font-semibold text-gray-900 mb-2">Jake Aduhai</h5>
             <span className="text-gray-500">Founder, CTO</span>
           </div>
         </div>
         <div className="w-full md:w-1/2 xl:w-1/4 px-4 mb-12">
           <div className="max-w-xs md:max-w-none mx-auto">
-            <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt=""/>
+            <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt="" width={0} height={0}/>
             <h5 className="text-2xl font-semibold text-gray-900 mb-2">Azalea Perumahan</h5>
             <span className="text-gray-500">Founder, CTO</span>
           </div>
         </div>
         <div className="w-full md:w-1/2 xl:w-1/4 px-4 mb-12">
           <div className="max-w-xs md:max-w-none mx-auto">
-            <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt=""/>
+            <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt="" width={0} height={0}/>
             <h5 className="text-2xl font-semibold text-gray-900 mb-2">Gatot Bambang</h5>
             <span className="text-gray-500">Founder, CTO</span>
           </div>

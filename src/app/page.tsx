@@ -6,7 +6,6 @@ import Ourservices from "../components/Ourservices";
 import Ourteam from "../components/Ourteam";
 import Benefits from "@/components/Benefits";
 import Reviews from "@/components/Reviews";
-import { currentUser } from "@clerk/nextjs/server";
 
 export default async function Home() {
  
@@ -14,7 +13,7 @@ export default async function Home() {
 
     <main>
       <HeaderSection/>
-      <Courses/>
+      {/* <Courses/> */}
       <Ourservices/>
       <Agendaof/>
       <Benefits/>
