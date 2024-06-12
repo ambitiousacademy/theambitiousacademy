@@ -59,7 +59,7 @@ export default function Dashboard() {
    <div className="container m-auto">
       <div className="flex flex-wrap -mx-4">
          {coursedata?.user?.enrolledCourses[0].coursesdetails.map((data,index)=>(
-            <div className="w-full md:w-1/2 xl:w-1/3 px-4">
+            <div key={index} className="w-full md:w-1/2 xl:w-1/3 px-4">
             <div className="bg-white rounded-lg overflow-hidden mb-10">
                <Image
                   src={`${data.courseimage}`}
