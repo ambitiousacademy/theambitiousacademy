@@ -15,8 +15,8 @@ import Footer from "../components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "Gzenerated by create next app",
+  title: "The Ambitious Academy",
+  description: "A Project Called Ambitious Academy",
 };
 
 export default function RootLayout({

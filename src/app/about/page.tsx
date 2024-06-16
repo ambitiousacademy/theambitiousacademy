@@ -1,164 +1,56 @@
-export default function Aboutus() {
+const AboutUs = () => {
     return (
-        <>
-
-            <div className="">
-                <div className="bg-gray-900 text-start w-full py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
-                    <h2 className="mb-5 text-6xl md:text-7xl font-bold font-heading tracking-px-n leading-tight text-white">About Us</h2>
-
-                </div>
-
-                <div className="flex">
-                    <article className="text-lg w-full">
-
-                        <p className="lead">Flowbite is an open-source library of UI components built with the utility-first
-                            classes from Tailwind CSS. It also includes interactive elements such as dropdowns, modals,
-                            datepickers.</p>
-                        <p>Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way,
-                            you can think things through before committing to an actual design project.</p>
-                        <p>But then I found a <a href="https://flowbite.com">component library based on Tailwind CSS called
-                            Flowbite</a>. It comes with the most commonly used UI components, such as buttons, navigation
-                            bars, cards, form elements, and more which are conveniently built with the utility classes from
-                            Tailwind CSS.</p>
-
-                        <h2>Getting started with Flowbite</h2>
-                        <p>First of all you need to understand how Flowbite works. This library is not another framework.
-                            Rather, it is a set of components based on Tailwind CSS that you can just copy-paste from the
-                            documentation.</p>
-                        <p>It also includes a JavaScript file that enables interactive components, such as modals, dropdowns,
-                            and datepickers which you can optionally include into your project via CDN or NPM.</p>
-                        <p>You can check out the <a href="https://flowbite.com/docs/getting-started/quickstart/">quickstart
-                            guide</a> to explore the elements by including the CDN files into your project. But if you want
-                            to build a project with Flowbite I recommend you to follow the build tools steps so that you can
-                            purge and minify the generated CSS.</p>
-                        <p>Youll also receive a lot of useful application UI, marketing UI, and e-commerce pages that can help
-                            you get started with your projects even faster. You can check out this <a
-                                href="https://flowbite.com/docs/components/tables/">comparison table</a> to better understand
-                            the differences between the open-source and pro version of Flowbite.</p>
-                        <h2>When does design come in handy?</h2>
-                        <p>While it might seem like extra work at a first glance, here are some key moments in which prototyping
-                            will come in handy:</p>
-                        <ol>
-                            <li><strong>Usability testing</strong>. Does your user know how to exit out of screens? Can they
-                                follow your intended user journey and buy something from the site youve designed? By running a
-                                usability test, youll be able to see how users will interact with your design once its live;
-                            </li>
-                            <li><strong>Involving stakeholders</strong>. Need to check if your GDPR consent boxes are displaying
-                                properly? Pass your prototype to your data protection team and they can test it for real;</li>
-                            <li><strong>Impressing a client</strong>. Prototypes can help explain or even sell your idea by
-                                providing your client with a hands-on experience;</li>
-                            <li><strong>Communicating your vision</strong>. By using an interactive medium to preview and test
-                                design elements, designers and developers can understand each other — and the project — better.
-                            </li>
-                        </ol>
-                        <h3>Laying the groundwork for best design</h3>
-                        <p>Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way,
-                            you can think things through before committing to an actual design project.</p>
-                        <p>Let&apos;s start by including the CSS file inside the <code>head</code> tag of your HTML.</p>
-                        <h3>Understanding typography</h3>
-                        <h4>Type properties</h4>
-                        <p>A typeface is a collection of letters. While each letter is unique, certain shapes are shared across
-                            letters. A typeface represents shared patterns across a collection of letters.</p>
-                        <h4>Baseline</h4>
-                        <p>A typeface is a collection of letters. While each letter is unique, certain shapes are shared across
-                            letters. A typeface represents shared patterns across a collection of letters.</p>
-                        <h4>Measurement from the baseline</h4>
-                        <p>A typeface is a collection of letters. While each letter is unique, certain shapes are shared across
-                            letters. A typeface represents shared patterns across a collection of letters.</p>
-                        <h3>Type classification</h3>
-                        <h4>Serif</h4>
-                        <p>A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter.
-                            Typefaces with serifs are called serif typefaces. Serif fonts are classified as one of the
-                            following:</p>
-                        <h4>Old-Style serifs</h4>
-                        <ul>
-                            <li>Low contrast between thick and thin strokes</li>
-                            <li>Diagonal stress in the strokes</li>
-                            <li>Slanted serifs on lower-case ascenders</li>
-                        </ul>
-                        <ol>
-                            <li>Low contrast between thick and thin strokes</li>
-                            <li>Diagonal stress in the strokes</li>
-                            <li>Slanted serifs on lower-case ascenders</li>
-                        </ol>
-                        <h3>Laying the best for successful prototyping</h3>
-                        <p>A serif is a small shape or projection that appears at the beginning:</p>
-                        <blockquote>
-                            <p>Flowbite is just awesome. It contains tons of predesigned components and pages starting from
-                                login screen to complex dashboard. Perfect choice for your next SaaS application.</p>
-                        </blockquote>
-                        <h4>Code example</h4>
-                        <p>A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter.
-                            Typefaces with serifs are called serif typefaces. Serif fonts are classified as one of the
-                            following:</p>
-                        
-                        <h4>Table example</h4>
-                        <p>A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter.
-                        </p>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Country</th>
-                                    <th>Date &amp; Time</th>
-                                    <th>Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>United States</td>
-                                    <td>April 21, 2021</td>
-                                    <td><strong>$2,300</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>Canada</td>
-                                    <td>May 31, 2021</td>
-                                    <td><strong>$300</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>United Kingdom</td>
-                                    <td>June 3, 2021</td>
-                                    <td><strong>$2,500</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>Australia</td>
-                                    <td>June 23, 2021</td>
-                                    <td><strong>$3,543</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>Germany</td>
-                                    <td>July 6, 2021</td>
-                                    <td><strong>$99</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>France</td>
-                                    <td>August 23, 2021</td>
-                                    <td><strong>$2,540</strong></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h3>Best practices for setting up your prototype</h3>
-                        <p><strong>Low fidelity or high fidelity?</strong> Fidelity refers to how close a prototype will be to
-                            the real deal. If youre simply preparing a quick visual aid for a presentation, a low-fidelity
-                            prototype — like a wireframe with placeholder images and some basic text — would be more than
-                            enough. But if youre going for more intricate usability testing, a high-fidelity prototype — with
-                            on-brand colors, fonts and imagery — could help get more pointed results.</p>
-                        <p><strong>Consider your user</strong>. To create an intuitive user flow, try to think as your user
-                            would when interacting with your product. While you can fine-tune this during beta testing,
-                            considering your users needs and habits early on will save you time by setting you on the right
-                            path.</p>
-                        <p><strong>Start from the inside out</strong>. A nice way to both organize your tasks and create more
-                            user-friendly prototypes is by building your prototypes ‘inside out. Start by focusing on what will
-                            be important to your user, like a Buy now button or an image gallery, and list each element by order
-                            of priority. This way, youll be able to create a prototype that puts your users needs at the heart
-                            of your design.</p>
-                        <p>And there you have it! Everything you need to design and share prototypes — right in Flowbite Figma.
-                        </p>
-                    </article>
-                </div>
-
-
-            </div>
-
-        </>
-    )
-}
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-4">About Us</h1>
+        <section className="mb-6">
+          <h2 className="text-2xl font-bold mb-2">Welcome to THE AMBITIOUS ACADEMY</h2>
+          <p>
+            At THE AMBITIOUS ACADEMY, we are dedicated to being your ultimate hub for skill development and academic excellence. Our platform is designed to cater to individuals at various stages of their educational and professional journeys, offering a range of resources that help you achieve your goals and realize your full potential.
+          </p>
+        </section>
+        <section className="mb-6">
+          <h2 className="text-2xl font-bold mb-2">Our Offerings</h2>
+          <ul className="list-disc list-inside">
+            <li className="mb-2">
+              <strong>Certification Courses:</strong> Our certification courses are tailored to enhance your career prospects by providing in-depth knowledge and practical skills in various fields. Whether you're looking to upskill, reskill, or delve into a new domain, our courses are structured to meet industry standards and ensure you gain the expertise needed to excel in your chosen career path.
+            </li>
+            <li className="mb-2">
+              <strong>Comprehensive Test Series:</strong> Preparing for competitive exams can be daunting, but with our comprehensive test series, you can approach your exams with confidence. We offer meticulously designed practice tests that mirror the format and difficulty level of real exams. These test series are crafted to help you identify your strengths and areas for improvement, giving you the edge you need to succeed.
+            </li>
+            <li className="mb-2">
+              <strong>Insightful Webinars:</strong> Learning from experts is a critical part of our educational philosophy. We host a series of insightful webinars led by industry leaders and subject matter experts. These sessions provide valuable insights, up-to-date information, and practical advice that can help you stay ahead in your field. Engage with our webinars to expand your knowledge and gain a deeper understanding of current trends and best practices.
+            </li>
+            <li className="mb-2">
+              <strong>Informative Blogs and Articles:</strong> Our blog and article section are designed to be a treasure trove of information and insights. Covering a wide range of topics, our content is crafted to provide you with multi-dimensional perspectives on various subjects. Whether you're looking for industry trends, academic advice, or personal development tips, our blogs and articles offer valuable information that can enrich your learning experience.
+            </li>
+            <li className="mb-2">
+              <strong>Freelancing Section:</strong> We also offer a dedicated section for freelancing, designed to connect freelancers with potential clients. Freelancers can log in to create profiles, showcase their skills, and bid for projects in their niche. Clients can sign in to post job advertisements and find talented professionals to meet their needs. This section aims to facilitate a dynamic and efficient marketplace where both freelancers and clients can achieve their goals.
+            </li>
+          </ul>
+        </section>
+        <section className="mb-6">
+          <h2 className="text-2xl font-bold mb-2">Our Mission</h2>
+          <p>
+            At THE AMBITIOUS ACADEMY, our mission is clear: to make high-quality education accessible and effective for everyone. We believe that education is the key to empowerment, and we are committed to providing the tools and resources necessary for individuals to achieve their ambitions. Our platform is designed to support lifelong learning, helping you to continuously grow and succeed.
+          </p>
+        </section>
+        <section className="mb-6">
+          <h2 className="text-2xl font-bold mb-2">Empowering Your Journey</h2>
+          <p>
+            We understand that every learner has unique goals and aspirations. Whether you're aiming to enhance your skills, prepare for a challenging exam, expand your knowledge base, or find freelance opportunities, THE AMBITIOUS ACADEMY is here to support you every step of the way. Our user-friendly platform, combined with a wealth of resources and expert guidance, ensures that you have everything you need to succeed.
+          </p>
+        </section>
+        <section className="mb-6">
+          <h2 className="text-2xl font-bold mb-2">Join Us</h2>
+          <p>
+            Take the first step towards achieving your ambitions by joining THE AMBITIOUS ACADEMY. Our community of learners is diverse, motivated, and dedicated to excellence. By becoming a part of our academy, you'll gain access to top-notch educational resources, expert-led sessions, a supportive environment, and a vibrant freelancing marketplace that fosters growth and success.
+          </p>
+          <p>
+            Join us today and take a step closer to realizing your ambitions. Together, we can unlock your potential and pave the way for a brighter future. Welcome to THE AMBITIOUS ACADEMY, where your success story begins.
+          </p>
+        </section>
+      </div>
+    );
+  };
+  
+  export default AboutUs;  

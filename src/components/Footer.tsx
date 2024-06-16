@@ -11,10 +11,10 @@ import Image from "next/image";
       </div>
       <div className="w-full md:w-1/2 p-6">
         <ul className="flex flex-wrap -m-5">
-          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="#">Features</a></li>
-          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="#">Pricing</a></li>
-          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="#">Affiliate Program</a></li>
-          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="#">Press Kit</a></li>
+          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="/cancelation-policy">Cancelation Policy</a></li>
+          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="/about">About Us</a></li>
+          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="/privacy-policy">Privacy Policy</a></li>
+          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="/contact-us">Contact Us</a></li>
         </ul>
       </div>
       <div className="w-auto md:ml-auto p-6">
@@ -35,8 +35,8 @@ import Image from "next/image";
       </div>
       <div className="w-auto p-6">
         <div className="flex flex-wrap -m-6">
-          <div className="w-auto p-6"><a className="text-gray-300 hover:text-gray-400 text-sm" href="#">Privacy Policy</a></div>
-          <div className="w-auto p-6"><a className="text-gray-300 hover:text-gray-400 text-sm" href="#">Terms & Conditions</a></div>
+          <div className="w-auto p-6"><a className="text-gray-300 hover:text-gray-400 text-sm" href="/privacy-policy">Privacy Policy</a></div>
+          <div className="w-auto p-6"><a className="text-gray-300 hover:text-gray-400 text-sm" href="/terms-and-conditions">Terms & Conditions</a></div>
         </div>
       </div>
     </div>
