@@ -68,7 +68,7 @@ const TermsAndConditions = () => {
         <section className="mb-6">
           <h2 className="text-2xl font-bold mb-2">Indemnification</h2>
           <p>
-            You agree to indemnify and hold THE AMBITIOUS ACADEMY and its affiliates, officers, agents, and employees harmless from any claim, demand, or damage, including reasonable attorneys' fees, arising out of your use of our services, your violation of these terms and conditions, or your infringement of any intellectual property or other rights of any person or entity.
+            You agree to indemnify and hold THE AMBITIOUS ACADEMY and its affiliates, officers, agents, and employees harmless from any claim, demand, or damage, including reasonable attorneys&apos; fees, arising out of your use of our services, your violation of these terms and conditions, or your infringement of any intellectual property or other rights of any person or entity.
           </p>
         </section>
         <section className="mb-6">
