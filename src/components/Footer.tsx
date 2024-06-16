@@ -21,7 +21,7 @@ import Image from "next/image";
         <div className="flex flex-wrap items-center -m-1.5">
            
           <div className="w-auto p-1.5">
-            <h3 className="font-heading font-medium text-base text-white">email@email.com</h3>
+            <h3 className="font-heading font-medium text-base text-white">contact@theambitiousacademy.com</h3>
           </div>
         </div>
       </div>
