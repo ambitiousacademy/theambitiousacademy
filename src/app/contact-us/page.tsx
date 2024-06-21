@@ -9,6 +9,8 @@ const ContactUs = () => {
           <h2 className="text-2xl font-bold">THE AMBITIOUS ACADEMY</h2>
           <p>Email: <a href="mailto:support@theambitiousacademy.com" className="text-blue-500">support@theambitiousacademy.com</a>; <a href="mailto:contact@theambitiousacademy.com" className="text-blue-500">contact@theambitiousacademy.com</a></p>
           <p>Phone: <a href="tel:+919238834569" className="text-blue-500">+91-9238834569</a></p>
+          <p>Address: <a href="tel:+919238834569" className="text-blue-500">Mig 18 jai prakash Narayan nagar behind p.k.school sirmour chauraha rewa m.p.
+          486001</a></p>
         </div>
         <p>
           By using our website, you consent to our Privacy Policy. Thank you for trusting THE AMBITIOUS ACADEMY with your personal data.
