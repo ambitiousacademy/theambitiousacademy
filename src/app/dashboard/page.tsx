@@ -33,6 +33,15 @@ interface CourseDetails {
 
 export default function Dashboard() {
    const { isLoaded, isSignedIn, user } = useUser();
+   const [loading, setLoading] = useState(true); // Initialize loading state as true
+
+   useEffect(() => {
+     const timer = setTimeout(() => {
+       setLoading(false); // Set loading to false after 5000ms (5 seconds)
+     }, 3000);
+ 
+     return () => clearTimeout(timer); // Clean up timer
+   }, []);
 
    const [coursedata, setCoursedata] = useState<ResponseData | null>(null);
 
@@ -54,76 +63,65 @@ export default function Dashboard() {
    return (
         <>
  
-{coursedata?.message === "User found" ? 
-   <section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
-   <div className="container m-auto">
-      <div className="flex flex-wrap -mx-4">
-         {coursedata?.user?.enrolledCourses[0].coursesdetails.map((data,index)=>(
+ {
+  loading ? (
+    <div className="loader flex justify-center items-center h-screen">
+      <h1 className="text-sm">Relax! The Page is loading...</h1>
+      {/* Add your loader animation or spinner here */}
+    </div>
+  ) : coursedata?.message === "User found" ? (
+    <section className="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+      <div className="container m-auto">
+        <div className="flex flex-wrap -mx-4">
+          {coursedata?.user?.enrolledCourses[0].coursesdetails.map((data, index) => (
             <div key={index} className="w-full md:w-1/2 xl:w-1/3 px-4">
-            <div className="bg-white rounded-lg overflow-hidden mb-10">
-               <Image
+              <div className="bg-white rounded-lg overflow-hidden mb-10">
+                <Image
                   src={`${data.courseimage}`}
                   alt="image"
                   className="w-full rounded-xl"
                   width={200}
                   height={200}
-                  />
-               <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                />
+                <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                   <h3>
-                     <a
-                        href={`/dashboard/${data.courseid}`}
-                        className="
-                        font-semibold
-                        text-dark text-xl
-                        sm:text-[22px]
-                        md:text-xl
-                        lg:text-[22px]
-                        xl:text-xl
-                        2xl:text-[22px]
-                        mb-4
-                        block
-                        hover:text-primary
-                        "
-                        >
-                     {data?.coursename}
-                     </a>
+                    <a
+                      href={`/dashboard/${data.courseid}`}
+                      className="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
+                    >
+                      {data?.coursename}
+                    </a>
                   </h3>
                   <p className="text-base text-body-color leading-relaxed mb-7">
-                  {data?.coursedesc}
+                    {data?.coursedesc}
                   </p>
                   <a
-                     href={`/dashboard/${data.courseid}`}
-                     className="
-                     inline-block
-                     py-2
-                     px-7
-                     border border-[#E5E7EB]
-                     rounded-full
-                     text-base text-body-color
-                     font-medium
-                     hover:border-primary hover:bg-primary hover:text-gray-900
-                     transition
-                     "
-                     >
-                  View Details
+                    href={`/dashboard/${data.courseid}`}
+                    className="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-base text-body-color font-medium hover:border-primary hover:bg-primary hover:text-gray-900 transition"
+                  >
+                    View Details
                   </a>
-               </div>
+                </div>
+              </div>
             </div>
-         </div>
-         ))}
-      </div>
-   </div>
-</section>
-: <div className="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
-<div className="max-w-xl mx-auto sm:px-6 lg:px-8">
-    <div className="flex items-center pt-8 sm:justify-start sm:pt-0">
-        <div className="px-4 text-lg ">
-        <p>Hi There {user?.firstName}</p>
-        <p>Your Dashboard is Empty Because You Have Not Enrolled In Any Courses.</p>
+          ))}
         </div>
+      </div>
+    </section>
+  ) : (
+    <div className="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+      <div className="max-w-xl mx-auto sm:px-6 lg:px-8">
+        <div className="flex items-center pt-8 sm:justify-start sm:pt-0">
+          <div className="px-4 text-lg">
+            <p>Hi There {user?.firstName}</p>
+            <p>Your Dashboard is Empty Because You Have Not Enrolled In Any Courses.</p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-</div>}
+  )
+}
+
         </>
     );
 }

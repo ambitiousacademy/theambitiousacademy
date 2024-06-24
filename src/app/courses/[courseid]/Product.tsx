@@ -127,8 +127,8 @@ export default function Product({ amount }: Props) {
         key: key,
         amount: order.amount,
         currency: "INR",
-        name: "Acme Corp",
-        description: "Test Transaction",
+        name: "The Ambitious Academy",
+        description: "Live Transaction For Course Buying.",
         image: "https://example.com/your_logo",
         order_id: order.id,
         handler: async function (response: RazorpayResponse) {
@@ -163,9 +163,9 @@ export default function Product({ amount }: Props) {
         // "callback_url": `${process.env.NEXT_PUBLIC_WEB_URL}/paymentverification?userid=${user?.id}&useremail=${user?.emailAddresses[0].emailAddress}&usernumber=${user?.phoneNumbers[0].phoneNumber}&username=${user?.username}&courseid=${params.courseid}`,
         // "callback_url": `${process.env.NEXT_PUBLIC_WEB_URL}/paymentverification`,
         prefill: {
-          name: "Gaurav Kumar",
-          email: "gaurav.kumar@example.com",
-          contact: "9000090000"
+          name: `${user?.fullName}`,
+          email: `${user?.emailAddresses}`,
+          contact: `${user?.primaryPhoneNumber}`
         },
         notes: {
           address: "Razorpay Corporate Office"
@@ -192,7 +192,10 @@ export default function Product({ amount }: Props) {
   return (
     <div>
       {coursedata && (
-        coursedata.message === "Course found" ? <section className="py-24">
+        coursedata.message === "Course found" ? 
+        <>
+       
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap mb-24 -mx-4">
               <div className="w-full lg:w-1/2 p-4">
@@ -200,42 +203,6 @@ export default function Product({ amount }: Props) {
                   <h2 className="text-4xl lg:text-5xl font-bold font-heading mb-4"> {coursedata?.data?.coursename} </h2>
                   <p className="text-gray-600 text-lg mb-4 max-w-md">{coursedata?.data?.coursedesc}</p>
                   <h2 className="text-lg font-bold font-heading mb-4">What you’ll get</h2>
-                  {/* <ul className="flex flex-col gap-4">
-                    <li>
-                        <div className="w-6 h-6">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M2 12C2 6.47692 6.47692 2 12 2C17.5231 2 22 6.47692 22 12C22 17.5231 17.5231 22 12 22C6.47692 22 2 17.5231 2 12ZM15.7026 10.1395C15.7641 10.0575 15.8086 9.96402 15.8335 9.86456C15.8584 9.76511 15.8632 9.66168 15.8475 9.56036C15.8319 9.45904 15.7962 9.36187 15.7424 9.27456C15.6887 9.18725 15.618 9.11157 15.5346 9.05195C15.4512 8.99233 15.3567 8.94999 15.2567 8.92741C15.1567 8.90484 15.0532 8.90248 14.9523 8.92047C14.8514 8.93847 14.755 8.97646 14.669 9.03222C14.583 9.08797 14.5089 9.16036 14.4513 9.24513L11.1323 13.8913L9.46667 12.2256C9.32085 12.0898 9.12798 12.0158 8.9287 12.0193C8.72941 12.0228 8.53927 12.1036 8.39834 12.2445C8.2574 12.3854 8.17667 12.5756 8.17315 12.7748C8.16964 12.9741 8.24361 13.167 8.37949 13.3128L10.6872 15.6205C10.7661 15.6994 10.8613 15.7602 10.9661 15.7986C11.071 15.837 11.1829 15.8522 11.2941 15.843C11.4054 15.8338 11.5133 15.8006 11.6104 15.7455C11.7075 15.6904 11.7914 15.6149 11.8564 15.5241L15.7026 10.1395Z" fill="#000000"></path>
-                          </svg>
-                        </div>
-                        <span>{coursedata?.data.coursewhatyouwillget.point1}</span>
-                      </li>
-                      <li>
-                        <div className="w-6 h-6">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M2 12C2 6.47692 6.47692 2 12 2C17.5231 2 22 6.47692 22 12C22 17.5231 17.5231 22 12 22C6.47692 22 2 17.5231 2 12ZM15.7026 10.1395C15.7641 10.0575 15.8086 9.96402 15.8335 9.86456C15.8584 9.76511 15.8632 9.66168 15.8475 9.56036C15.8319 9.45904 15.7962 9.36187 15.7424 9.27456C15.6887 9.18725 15.618 9.11157 15.5346 9.05195C15.4512 8.99233 15.3567 8.94999 15.2567 8.92741C15.1567 8.90484 15.0532 8.90248 14.9523 8.92047C14.8514 8.93847 14.755 8.97646 14.669 9.03222C14.583 9.08797 14.5089 9.16036 14.4513 9.24513L11.1323 13.8913L9.46667 12.2256C9.32085 12.0898 9.12798 12.0158 8.9287 12.0193C8.72941 12.0228 8.53927 12.1036 8.39834 12.2445C8.2574 12.3854 8.17667 12.5756 8.17315 12.7748C8.16964 12.9741 8.24361 13.167 8.37949 13.3128L10.6872 15.6205C10.7661 15.6994 10.8613 15.7602 10.9661 15.7986C11.071 15.837 11.1829 15.8522 11.2941 15.843C11.4054 15.8338 11.5133 15.8006 11.6104 15.7455C11.7075 15.6904 11.7914 15.6149 11.8564 15.5241L15.7026 10.1395Z" fill="#000000"></path>
-                          </svg>
-                        </div>
-                        <span>{coursedata?.data.coursewhatyouwillget.point2}</span>
-                      </li>
-                      <li>
-                        <div className="w-6 h-6">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M2 12C2 6.47692 6.47692 2 12 2C17.5231 2 22 6.47692 22 12C22 17.5231 17.5231 22 12 22C6.47692 22 2 17.5231 2 12ZM15.7026 10.1395C15.7641 10.0575 15.8086 9.96402 15.8335 9.86456C15.8584 9.76511 15.8632 9.66168 15.8475 9.56036C15.8319 9.45904 15.7962 9.36187 15.7424 9.27456C15.6887 9.18725 15.618 9.11157 15.5346 9.05195C15.4512 8.99233 15.3567 8.94999 15.2567 8.92741C15.1567 8.90484 15.0532 8.90248 14.9523 8.92047C14.8514 8.93847 14.755 8.97646 14.669 9.03222C14.583 9.08797 14.5089 9.16036 14.4513 9.24513L11.1323 13.8913L9.46667 12.2256C9.32085 12.0898 9.12798 12.0158 8.9287 12.0193C8.72941 12.0228 8.53927 12.1036 8.39834 12.2445C8.2574 12.3854 8.17667 12.5756 8.17315 12.7748C8.16964 12.9741 8.24361 13.167 8.37949 13.3128L10.6872 15.6205C10.7661 15.6994 10.8613 15.7602 10.9661 15.7986C11.071 15.837 11.1829 15.8522 11.2941 15.843C11.4054 15.8338 11.5133 15.8006 11.6104 15.7455C11.7075 15.6904 11.7914 15.6149 11.8564 15.5241L15.7026 10.1395Z" fill="#000000"></path>
-                          </svg>
-                        </div>
-                        <span>{coursedata?.data.coursewhatyouwillget.point3}</span>
-                      </li>
-                      <li>
-                        <div className="w-6 h-6">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M2 12C2 6.47692 6.47692 2 12 2C17.5231 2 22 6.47692 22 12C22 17.5231 17.5231 22 12 22C6.47692 22 2 17.5231 2 12ZM15.7026 10.1395C15.7641 10.0575 15.8086 9.96402 15.8335 9.86456C15.8584 9.76511 15.8632 9.66168 15.8475 9.56036C15.8319 9.45904 15.7962 9.36187 15.7424 9.27456C15.6887 9.18725 15.618 9.11157 15.5346 9.05195C15.4512 8.99233 15.3567 8.94999 15.2567 8.92741C15.1567 8.90484 15.0532 8.90248 14.9523 8.92047C14.8514 8.93847 14.755 8.97646 14.669 9.03222C14.583 9.08797 14.5089 9.16036 14.4513 9.24513L11.1323 13.8913L9.46667 12.2256C9.32085 12.0898 9.12798 12.0158 8.9287 12.0193C8.72941 12.0228 8.53927 12.1036 8.39834 12.2445C8.2574 12.3854 8.17667 12.5756 8.17315 12.7748C8.16964 12.9741 8.24361 13.167 8.37949 13.3128L10.6872 15.6205C10.7661 15.6994 10.8613 15.7602 10.9661 15.7986C11.071 15.837 11.1829 15.8522 11.2941 15.843C11.4054 15.8338 11.5133 15.8006 11.6104 15.7455C11.7075 15.6904 11.7914 15.6149 11.8564 15.5241L15.7026 10.1395Z" fill="#000000"></path>
-                          </svg>
-                        </div>
-                        <span>{coursedata?.data.coursewhatyouwillget.point4}</span>
-                      </li>
-
-                  </ul> */}
-
 <div className="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
 		<div className="py-5">
 			<details className="group">
@@ -429,8 +396,9 @@ export default function Product({ amount }: Props) {
      </div>
     </div>
           </div>
-        </section> : null
+        </section></> : null
       )}
     </div>
+    
   )
 }
