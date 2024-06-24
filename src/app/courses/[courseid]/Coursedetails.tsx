@@ -93,6 +93,8 @@ const CourseDetails: React.FC = () => {
 
   useEffect(() => {
     const fetchcourse = async () => {
+      console.log(user?.id)
+
       try {
         const response = await axios.get<Course>(`https://ap-south-1.aws.data.mongodb-api.com/app/application-0-jvxnhwz/endpoint/getCourseDetails?courseId=${courseid}`);
         const response2 = await axios.get<isBoughtDataAPI>(`${process.env.NEXT_PUBLIC_WEB_URL}/checkUserEnrolledCourse?userid=${user?.id}&courseid=${courseid}`);
@@ -105,8 +107,13 @@ const CourseDetails: React.FC = () => {
       }
     };
 
-    fetchcourse();
+    if (user?.id !== undefined) {
+      fetchcourse();
+
+    }
   }, [courseid, user]);
+
+  // console.log(JSON.stringify(user?.id));
 
   const checkoutHandler = async (amount: string) => {
     const checkOutPrice = parseInt(amount);
@@ -188,9 +195,9 @@ const CourseDetails: React.FC = () => {
 
   if (loading) {
     return <div className="loader flex justify-center items-center h-screen">
-    <h1 className="text-sm">Relax! The Course Details are loading...</h1>
-    {/* Add your loader animation or spinner here */}
-  </div>;
+      <h1 className="text-sm">Relax! The Course Details are loading...</h1>
+      {/* Add your loader animation or spinner here */}
+    </div>;
   }
 
   // if (!course) {
