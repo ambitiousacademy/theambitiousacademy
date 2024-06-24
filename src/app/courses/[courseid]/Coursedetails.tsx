@@ -193,12 +193,12 @@ const CourseDetails: React.FC = () => {
   </div>;
   }
 
-  if (!course) {
-    return <div className="loader flex justify-center items-center h-screen">
-    <h1 className="text-sm">OOPS!... We Could Not Found Any Details In Our Database For This Course ID: {courseid}</h1>
-    {/* Add your loader animation or spinner here */}
-  </div>;
-  }
+  // if (!course) {
+  //   return <div className="loader flex justify-center items-center h-screen">
+  //   <h1 className="text-sm">OOPS!... We Could Not Found Any Details In Our Database For This Course ID: {courseid}</h1>
+  //   {/* Add your loader animation or spinner here */}
+  // </div>;
+  // }
 
   return (
     <div className="container mx-auto px-4">
