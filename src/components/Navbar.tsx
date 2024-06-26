@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 // import { Transition } from "@headlessui/react";
 import Link from 'next/link';
-import { useClerk, useUser } from '@clerk/nextjs';
+import { useClerk, useUser, UserButton } from '@clerk/nextjs';
 import axios from 'axios';
 
 const Navbar = () => {
@@ -51,20 +51,7 @@ const Navbar = () => {
               <li>
                 <a href="/about" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
               </li>
-              <li>
-
-                {isSignedIn && (
-                  <button onClick={() => signOut({ redirectUrl: '/' })} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                    Sign Out
-                  </button>
-                )}
-                {!isSignedIn && (
-                  <Link href="/sign-in" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                    Sign In
-                  </Link>
-                )}
-
-              </li>
+              
              
               {isSignedIn && (
                  <li>
@@ -79,6 +66,21 @@ const Navbar = () => {
                 )}
               <li>
                 <a href="/contact-us" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              </li>
+              <li>
+
+                {isSignedIn && (
+                  // <button onClick={() => signOut({ redirectUrl: '/' })} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                  //   Sign Out
+                  // </button>
+                  <UserButton/>
+                )}
+                {!isSignedIn && (
+                  <Link href="/sign-in" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                    Sign In
+                  </Link>
+                )}
+
               </li>
             </ul>
           </div>

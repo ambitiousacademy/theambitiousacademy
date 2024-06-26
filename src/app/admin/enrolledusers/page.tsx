@@ -14,6 +14,15 @@ const UserListPage = () => {
   const [users, setUsers] = useState<User[]>([]);
   const { isSignedIn, user } = useUser();
   const [isValidAdmin, setIsValidAdmin] = useState(false);
+  const [loading, setLoading] = useState(true); // Initialize loading state as true
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); // Set loading to false after 5000ms (5 seconds)
+    }, 3000);
+
+    return () => clearTimeout(timer); // Clean up timer
+  }, []);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -38,7 +47,15 @@ const UserListPage = () => {
   }, [isSignedIn, user, isValidAdmin]); // Dependency array includes isSignedIn, user, and isValidAdmin
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <>
+
+{loading ? (
+      <div className="loader flex justify-center items-center h-screen">
+        <h1 className="text-sm">Relax! The Page is loading...</h1>
+        {/* Add your loader animation or spinner here */}
+      </div>
+    ) : (
+      <div className="container mx-auto px-4 py-8">
       {isValidAdmin && isSignedIn ? (
         <>
           <h1 className="text-2xl font-semibold mb-4">Enrolled Users</h1>
@@ -64,6 +81,10 @@ const UserListPage = () => {
         </div>
       )}
     </div>
+    )
+    }
+    
+    </>
   );
 };
 

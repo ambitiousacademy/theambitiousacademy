@@ -94,7 +94,7 @@ const Header = () => {
     <div className="relative w-full overflow-hidden">
       <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
         {slides.map((slide, index) => (
-          <div key={index} className="min-w-full h-[30rem] md:h-[calc(100vh-120px)] flex-shrink-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${slide.imageUrl})` }}>
+          <div key={index} className="min-w-full h-[30rem] md:h-[calc(100vh-300px)] flex-shrink-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${slide.imageUrl})` }}>
             <div className="h-full flex flex-col justify-end w-2/3 md:max-w-lg p-5 md:p-10 text-white">
               <span>{slide.title}</span>
               <span className="text-xl md:text-3xl">{slide.description}</span>
