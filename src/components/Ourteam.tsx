@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Ourteam(){
     return (
         <>
-        <section className="relative py-20 md:py-24 overflow-hidden m-10">
+        <section className="relative mb-24 md:mb-24 overflow-hidden m-10">
   <div className="relative container px-4 mx-auto">
     <div className="max-w-2xl lg:max-w-3xl mx-auto xl:max-w-7xl">
       <div className="flex flex-wrap mb-20 -mx-4 items-center">
@@ -11,7 +11,6 @@ export default function Ourteam(){
           <div>
             <h1 className="font-heading text-5xl xs:text-6xl md:text-7xl font-bold text-gray-900 mb-8">
               <span>Get to know our amazing</span>
-              <span className="font-serif italic">Team</span>
             </h1>
           </div>
         </div>
@@ -30,34 +29,28 @@ export default function Ourteam(){
         </div>
       </div>
       <div className="flex flex-wrap -mx-4 -mb-12">
-        <div className="w-full md:w-1/2 xl:w-1/4 px-4 mb-12">
+        <div className="w-full md:w-1/2 xl:w-1/3 px-4 mb-12">
           <a href="/faculty-profile/667539ac72f4b13ae12c5d74" className="max-w-xs md:max-w-none mx-auto">
             <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt="" width={0} height={0}/>
             <h5 className="text-2xl font-semibold text-gray-900 mb-2">Aditya Trivedi</h5>
-            <span className="text-gray-500">Faculty</span>
+            <span className="text-gray-500">Faculty</span>  
           </a>
         </div>
-        <div className="w-full md:w-1/2 xl:w-1/4 px-4 mb-12">
+        <div className="w-full md:w-1/2 xl:w-1/3 px-4 mb-12">
           <a href="/faculty-profile/6675452d72f4b13ae13759a3" className="max-w-xs md:max-w-none mx-auto">
             <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt="" width={0} height={0}/>
             <h5 className="text-2xl font-semibold text-gray-900 mb-2">Trisandhya</h5>
             <span className="text-gray-500">Faculty</span>
           </a>
         </div>
-        <div className="w-full md:w-1/2 xl:w-1/4 px-4 mb-12">
+        <div className="w-full md:w-1/2 xl:w-1/3 px-4 mb-12">
           <a href="/faculty-profile/6675456b72f4b13ae137961f" className="max-w-xs md:max-w-none mx-auto">
             <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt="" width={0} height={0}/>
             <h5 className="text-2xl font-semibold text-gray-900 mb-2">Rachna Jha</h5>
             <span className="text-gray-500">Faculty</span>
           </a>
         </div>
-        <div className="w-full md:w-1/2 xl:w-1/4 px-4 mb-12">
-          <div className="max-w-xs md:max-w-none mx-auto">
-            <Image className="block mb-4 w-full h-72 object-cover rounded-3xl" src="https://dummyimage.com/400x350" alt="" width={0} height={0}/>
-            <h5 className="text-2xl font-semibold text-gray-900 mb-2">Coming Soon</h5>
-            <span className="text-gray-500">Faculty</span>
-          </div>
-        </div>
+    
       </div>
     </div>
   </div>

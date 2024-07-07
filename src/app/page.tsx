@@ -1,13 +1,12 @@
 "use client"
-import Agendaof from "@/components/Agendaof";
 import Courses from "../components/Courses";
 import FAQ from "../components/Faqs";
 import HeaderSection from "../components/Header";
-import Ourservices from "../components/Ourservices";
 import Ourteam from "../components/Ourteam";
-import Benefits from "@/components/Benefits";
-import Reviews from "@/components/Reviews";
+// import Reviews from "@/components/Reviews";
 import { useEffect, useState } from "react";
+import Services from "@/components/Services";
+import Subscribe from "../components/Subscribe";
 
 export default function Home() {
   const [loading, setLoading] = useState(true); // Initialize loading state as true
@@ -24,23 +23,32 @@ export default function Home() {
 
   return (
     <main>
-      {loading ? (
+      {/* {loading ? (
         <div className="loader flex justify-center items-center h-screen">
           <h1 className="text-sm">Relax! The Page is loading...</h1>
-          {/* Add your loader animation or spinner here */}
-        </div>
+         </div>
       ) : (
-        <>
-          <HeaderSection />
-          {/* <Courses /> */}
-          <Ourservices />
-          <Agendaof />
-          <Benefits />
+        
+      )} */}
+      <>
+          {/* This Contains The Carousel Part */}
+          <HeaderSection /> 
+
+        {/* This is the courses section */}
+          <Courses />
+
+        {/* This is the services section contains 3 things right now test series, webinars, study materials */}
+          <Services/>
+
+        {/* This is the subscription component for taking user emails and all */}
+          <Subscribe />
+
+          {/* The team component */}
           <Ourteam />
-          <Reviews />
-          <FAQ />
+
+          {/* FAQ's
+          <FAQ /> */}
         </>
-      )}
     </main>
   );
 }

@@ -94,6 +94,7 @@ const CourseDetails: React.FC = () => {
   useEffect(() => {
     const fetchcourse = async () => {
       console.log(user?.id)
+      console.log("Running")
 
       try {
         const response = await axios.get<Course>(`https://ap-south-1.aws.data.mongodb-api.com/app/application-0-jvxnhwz/endpoint/getCourseDetails?courseId=${courseid}`);
@@ -193,34 +194,20 @@ const CourseDetails: React.FC = () => {
     }
   };
 
-  if (loading) {
-    return <div className="loader flex justify-center items-center h-screen">
-      <h1 className="text-sm">Relax! The Course Details are loading...</h1>
-      {/* Add your loader animation or spinner here */}
-    </div>;
-  }
-
-  // if (!course) {
-  //   return <div className="loader flex justify-center items-center h-screen">
-  //   <h1 className="text-sm">OOPS!... We Could Not Found Any Details In Our Database For This Course ID: {courseid}</h1>
-  //   {/* Add your loader animation or spinner here */}
-  // </div>;
-  // }
-
   return (
     <div className="container mx-auto px-4">
 
       {course && (
         <>
           <section className="text-gray-600 body-font overflow-hidden">
-            <div className="container px-5 py-24 mx-auto">
+            <div className="container px-5 py-24 mx-auto bg-gray-200">
               <div className="lg:w-full mx-auto flex flex-wrap">
                 <Image
                   src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="image"
                   width={400}
                   height={300}
-                  className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+                  className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-xl"
                 />
                 <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                   <h2 className="text-sm title-font text-gray-500 tracking-widest">The Ambitious Academy Certificate Courses</h2>
@@ -276,8 +263,9 @@ const CourseDetails: React.FC = () => {
                 </div>
 
 
-
               </div>
+              </div>
+              <div className="container px-5 mx-auto">
 
               <h2 className="mt-12 text-3xl font-bold font-heading mb-4">
                 What you’ll get
