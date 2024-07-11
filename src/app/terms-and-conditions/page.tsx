@@ -39,19 +39,8 @@ const TermsAndConditions = () => {
         <section className="mb-6">
           <h2 className="text-2xl font-bold mb-2">Cancellation and Refund Policy</h2>
           <p>
-            We do not offer cancellation provisions or refunds except under exceptional circumstances. If you wish to request a cancellation and refund, please contact us with your reason for withdrawal.
+          We do not offer cancellations or refunds except under exceptional circumstances. To request a cancellation and refund, contact us with your reason for withdrawal. All requests are subject to approval, and if approved, 30% of the total amount paid will be deducted as a processing fee, with the remaining amount refunded to the original payment source.
           </p>
-          <ul className="list-disc list-inside">
-            <li>
-              <strong>Contact for Withdrawal:</strong> You can contact us at <a href="mailto:support@theambitiousacademy.com" className="text-blue-500">support@theambitiousacademy.com</a> with detailed reasons for your cancellation request.
-            </li>
-            <li>
-              <strong>Approval:</strong> All cancellation and refund requests are subject to approval by our team.
-            </li>
-            <li>
-              <strong>Deduction:</strong> If your cancellation and refund request is approved, 30% of the total amount paid will be deducted as a processing fee, and the remaining amount will be refunded to the original payment source.
-            </li>
-          </ul>
         </section>
         <section className="mb-6">
           <h2 className="text-2xl font-bold mb-2">Intellectual Property</h2>
@@ -68,7 +57,7 @@ const TermsAndConditions = () => {
         <section className="mb-6">
           <h2 className="text-2xl font-bold mb-2">Indemnification</h2>
           <p>
-            You agree to indemnify and hold THE AMBITIOUS ACADEMY and its affiliates, officers, agents, and employees harmless from any claim, demand, or damage, including reasonable attorneys&apos; fees, arising out of your use of our services, your violation of these terms and conditions, or your infringement of any intellectual property or other rights of any person or entity.
+           You agree to indemnify and hold THE AMBITIOUS ACADEMY and its affiliates, officers, agents, and employees harmless from any claim, demand, or damage, including reasonable attorneys fees, arising out of your use of our services, your violation of these terms and conditions, or your infringement of any intellectual property or other rights of any person or entity.
           </p>
         </section>
         <section className="mb-6">
