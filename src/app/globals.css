@@ -1,0 +1,317 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (max-width:640px){
+    .smallhidden{
+        display: none;
+    }
+}
+
+
+
+/*--------------------------------------------- carousel CSS --------------------------------------------*/
+.header-container {
+  margin: 0.5% 5% 2% 5%;
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  max-height: 300px;
+  align-content: center;
+  border-radius: 1.7rem;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 1s;
+}
+
+.slide {
+  width: 100%;
+  height: 300px;
+  background-size: cover ;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.slide-content {
+  margin-top: 2%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1%;
+  color: white;
+}
+
+/* .learn-more {
+  margin-top: 10%;
+  padding: 1% 1.5%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+.learn-more:hover {
+  background-color: #f3f3f3;
+} */
+
+.nav-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2%;
+  color: black;
+  border-radius: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nav-button.left {
+  left: 0;
+}
+
+.nav-button.right {
+  right: 0;
+}
+
+
+/* For tablets */
+@media (max-width: 768px) {
+  .header-container {
+    margin: 1% 3% 3% 3%;
+    width: 94%;
+    max-height: 250px;
+  }
+  
+  .slide {
+    height: 250px;
+    background-size: contain ;
+  }
+
+  .slide-content {
+    padding: 2%;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .header-container {
+    margin: 2% 2% 4% 2%;
+    width: 96%;
+    max-height: 200px;
+  }
+  
+  .slide {
+    height: 95px;
+    background-size: contain ;
+  }
+
+  .slide-content {
+    padding: 3%;
+  }
+}
+
+
+
+/* -------------------------------------------Services CSS-------------------------------------------- */
+.services-container {
+  height: 400px;
+  margin-top: 2%;
+  margin-bottom: 10px;
+  width: 80%;
+  background-color: #E0FBE2; 
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-left: auto; /* Auto margin to center horizontally */
+  margin-right: auto; /* Auto margin to center horizontally */
+  border-radius: 25px;
+  box-shadow: 10px 5px 5px rgb(168, 241, 166);
+  position: relative; /* Relative positioning for absolute children */
+} 
+
+.services-inner-container {
+  max-width: 80rem; /* max-w-5xl */
+  padding-top: 2%;
+  margin: 0; /* Remove auto margin */
+  margin-left:-60%; /* Set left margin to push it to the left */
+}
+
+.services-title {
+  color: #000000; /* text-gray-700 */
+  font-weight: 600; /* font-semibold */
+  font-size: 2.5rem; /* text-2xl */ 
+  line-height: 2.5rem; /* md:leading-tight */
+  position: absolute; /* Absolute positioning */
+  top: 4%; /* Adjust top position as needed */
+  left: 4%; /* Adjust left position as needed */
+}
+
+.services-grid {
+  display: flex; /* Flex layout for aligning items */
+  gap: 2.5rem; /* Gap between service items and image */
+}
+.service-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.service-item-inner {
+  
+  border-radius: 0.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.service-item-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  color: #ed8936;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.service-item-title {
+  font-weight: 500;
+  flex-grow: 1; /* Allow title to grow to fill remaining space */
+  overflow: hidden; /* Hide overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+  
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .service-item {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the left */
+    font-size: 0.5rem;
+  }
+
+  .service-item-inner {
+    padding: 0.75rem; /* Reduce padding on smaller screens */
+  }
+
+  .service-item-icon {
+    width: 1.25rem; /* Decrease icon size on smaller screens */
+    height: 1.25rem;
+    margin-right: 0.5em; /* Reduce margin between icon and text */
+  }
+
+  .service-item-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: calc(100% - 2.5rem); /* Adjust width to fit within container */
+    font-size: 0.65rem; /* Decrease font size for smaller screens */
+  }
+}
+
+
+.service-image {
+  border-radius: 3%; /* Changed to percentage for rounded corners */
+  position: absolute;
+  right: 5%; /* Adjust right position as needed (changed to percentage) */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  height: 40vh; /* Changed height to viewport height (vh) for responsiveness */
+  width: 35%; /* Changed width to percentage for responsiveness */
+  max-width: 400px; /* Added max-width to limit width on larger screens */
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .service-image {
+    right: 2%; /* Adjust right position for smaller screens */
+    top: 60%; /* Adjust top position for smaller screens */
+    transform: translateY(-50%); /* Keep centered vertically */
+    height: 30vh; /* Example change for smaller screens */
+    width: 45%; /* Example change for smaller screens */
+    max-width: none; /* Reset max-width if needed */
+  }
+}
+
+
+.service-image-visible {
+  display: block; /* block */
+}
+
+
+/*-----------------------------------------------courses.css -------------------------------------+ */
+
+.course-card {
+  margin-top: 0%;
+  width: 100%;
+  text-align:start;
+  color: #000000; /* Text color */
+  border-style: inset; 
+  box-shadow: 10px 5px 5px rgb(201, 196, 194);
+  padding: 1.5rem; /* Padding around the card */
+  border-radius: 1.5rem; /* Rounded corners */
+  /* margin-bottom: 2rem; Bottom margin */
+}
+
+
+.course-title {
+  font-size: 1.5rem; /* Title font size */
+  font-weight: bold; /* Title font weight */
+  margin-bottom: 1rem; /* Bottom margin for title */
+}
+
+.course-description {
+  margin-bottom: 1.5rem; /* Bottom margin for description */
+}
+
+.course-price {
+  background-color: #38a169; /* Background color for price */
+  color: white; /* Text color for price */
+  padding: 0.75rem 1rem; /* Padding around price */
+  border-radius: 999px; /* Rounded pill shape */
+  display: inline-flex; /* Display as inline-flex */
+  align-items: center; /* Center items vertically */
+  justify-content: c; /* Center items horizontally */
+  gap: 0.5rem; /* Gap between icon and text */
+  text-align: center; /* Center text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
+}
+
+.course-price:hover,
+.course-price:focus {
+  background-color: #ed8936; /* Darker background color on hover/focus */
+}
+
+.course-price svg {
+  width: 1rem; /* Icon width */
+  height: 1rem; /* Icon height */
+  fill: currentColor; /* Use current text color for icon */
+}
