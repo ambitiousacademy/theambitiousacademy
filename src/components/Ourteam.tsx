@@ -4,8 +4,8 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-const Ourteam = () => {
-  const reviews = [
+const Ourteam = () => {   
+  const review = [
     {
       id: 1,
       name: 'John Doe',
