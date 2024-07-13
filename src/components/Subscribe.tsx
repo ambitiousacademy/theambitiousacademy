@@ -61,20 +61,17 @@ const Subscribe = () => {
   };
 
   return (
-    <div className='mb-24'>
+    <div className='mb-4'>
       <section className="">
         <div className="container mx-auto px-4 ">
           {/* MAILING STORAGE */}
           <section className="text-gray-600 body-font">
             <div className="container mx-auto">
-              <div className="flex flex-col text-center w-full mb-12">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+              <div className="flex flex-col text-center w-full">
+                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 mt-4 text-gray-900">
                   Ambitious Academy Premium Notification
                 </h1>
-                <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                  Stay ahead of the curve! Sign up for our notifications by entering your email. Be the
-                  first to receive updates from us, completely free of charge.
-                </p>
+
               </div>
               <form onSubmit={handleSubmit}>
                 <div className="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
@@ -110,7 +107,7 @@ const Subscribe = () => {
                   </div>
                   <button
                     type="submit"
-                    className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                    className="text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg"
                   >
                     Subscribe
                   </button>

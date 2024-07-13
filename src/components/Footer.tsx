@@ -3,25 +3,27 @@ import Image from "next/image";
  export default function Footer(){
     return (
         <>
-        <section className="flex flex-col bg-black  p-10">
+        <section className="flex flex-col bg-black mt-2 p-10">
   <div className="container mx-auto px-4">
     <div className="flex flex-wrap lg:items-center -m-6">
       <div className="w-full md:w-auto p-6">
         <Image src="https://dummyimage.com/60x60" alt="" width={0} height={0}/>
       </div>
-      <div className="w-full md:w-1/2 p-6">
-        <ul className="flex flex-wrap -m-5">
-          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="/cancelation-policy">Cancelation Policy</a></li>
-          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="/about">About Us</a></li>
-          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="/privacy-policy">Privacy Policy</a></li>
-          <li className="p-5"><a className="font-heading text-base text-white hover:text-gray-200" href="/contact-us">Contact Us</a></li>
+      <div className="w-full md:w-1/2 p-2">
+        <ul className="">
+
+        <li className="p-1"><a className="font-heading text-base text-white hover:text-gray-200" href="/about">About Us</a></li>
+        <li className="p-1"><a className="font-heading text-base text-white hover:text-gray-200" href="/contact-us">Contact Us</a></li>
+        <li className="p-1"><a className="font-heading text-base text-white hover:text-gray-200" href="/cancelation-policy">Cancelation Policy</a></li>
+         
+         
         </ul>
       </div>
       <div className="w-auto md:ml-auto p-6">
         <div className="flex flex-wrap items-center -m-1.5">
            
           <div className="w-auto p-1.5">
-            <h3 className="font-heading font-medium text-base text-white">contact@theambitiousacademy.com</h3>
+            <h3 className="font-heading font-medium  text-base text-white">contact@theambitiousacademy.com</h3>
           </div>
         </div>
       </div>
