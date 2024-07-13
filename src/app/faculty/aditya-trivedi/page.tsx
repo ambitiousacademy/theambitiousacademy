@@ -4,7 +4,7 @@ const Faculty = () => {
        
         <h1 className="text-4xl font-bold mb-4">Aditya Trivedi</h1>
         <section className="mb-6">
-       < img 
+       < img
           src='' 
           alt="Faculty Image" 
           className="object-cover h-40 w-50 rounded-lg"
@@ -65,7 +65,7 @@ const Faculty = () => {
             Advised major conglomerates on competition law cases.
               </li>
               <li className="mb-2">
-              Founder of "In Conversation with IPR and Competition Law" podcast.
+              Founder of In Conversation with IPR and Competition Law podcast.
               </li>
               <li className="mb-2">
               Founding Director of Arth Vidhi and Atlas-Young Founders’ Club.

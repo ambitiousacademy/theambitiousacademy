@@ -77,7 +77,7 @@ const Faculty = () => {
         <li className="mb-2">
             <strong>Focus on Practical Skills: </strong>Guides students in developing skills in drafting and conveyancing. </li>
             <li className="mb-2">
-            <strong>Passion for Law: </strong>Dedicated to students' success and the field of legal education.</li>
+            <strong>Passion for Law: </strong>Dedicated to students success and the field of legal education.</li>
       
       </section>
     </div>
