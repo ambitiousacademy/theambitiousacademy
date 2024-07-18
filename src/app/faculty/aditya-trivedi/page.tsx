@@ -4,11 +4,11 @@ const Faculty = () => {
        
         <h1 className="text-4xl font-bold mb-4">Aditya Trivedi</h1>
         <section className="mb-6">
-       < img
+       {/* < img
           src='' 
           alt="Faculty Image" 
           className="object-cover h-40 w-50 rounded-lg"
-        />
+        /> */}
         </section>
         <section className="mb-6" >
           <ul className="list-disc list-inside">

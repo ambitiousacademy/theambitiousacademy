@@ -15,6 +15,8 @@ import Image from "next/image";
         <li className="p-1"><a className="font-heading text-base text-white hover:text-gray-200" href="/about">About Us</a></li>
         <li className="p-1"><a className="font-heading text-base text-white hover:text-gray-200" href="/contact-us">Contact Us</a></li>
         <li className="p-1"><a className="font-heading text-base text-white hover:text-gray-200" href="/cancelation-policy">Cancelation Policy</a></li>
+        <li className="p-1"><a className="font-heading text-base text-white hover:text-gray-200" href="/ourteam">Our Team</a></li>
+
          
          
         </ul>
