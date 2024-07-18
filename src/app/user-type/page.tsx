@@ -1,57 +1,64 @@
-import React from 'react'
+"use client";
+import { useUser } from "@clerk/nextjs";
+import React, { useEffect, useState } from 'react';
 
-const page = () => {
+const Page: React.FC = () => {
+  const { user, isLoaded } = useUser();
+  const [userType, setUserType] = useState<string>("");
+
+  useEffect(() => {
+    if (isLoaded && user) {
+      // Retrieve the userType from the metadata
+      const storedUserType = (user.unsafeMetadata as { userType?: string })?.userType || "";
+      setUserType(storedUserType);
+    }
+  }, [isLoaded, user]);
+
   return (
     <section className="text-gray-600 body-font relative">
-    <div className="container px-5 py-24 mx-auto">
-      <div className="flex flex-col text-center w-full mb-12">
-        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">User Type</h1>
-        <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-        What Defines You The Best!.. This will help us to serve you better.
-        </p>
-      </div>
-      <div className="lg:w-1/2 md:w-2/3 mx-auto">
-        <div className="flex flex-wrap -m-2">
-          <div className="p-2 w-1/2">
-            <div className="relative">
-            <div className="grid space-y-3">
-            <div className="relative flex items-start">
-    <div className="flex items-center h-5 mt-1">
-      <input id="hs-checkbox-archive" name="hs-checkbox-archive" type="checkbox" className="border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" aria-describedby="hs-checkbox-archive-description"/>
-    </div>
-    <label htmlFor="hs-checkbox-archive" className="ms-3">
-      <span className="block text-sm font-semibold text-gray-800">Archive</span>
-      <span id="hs-checkbox-archive-description" className="block text-sm text-gray-600">Notify me when this action happens.</span>
-    </label>
-  </div>
-
-  <div className="relative flex items-start">
-    <div className="flex items-center h-5 mt-1">
-      <input id="hs-checkbox-archive" name="hs-checkbox-archive" type="checkbox" className="border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" aria-describedby="hs-checkbox-archive-description"/>
-    </div>
-    <label htmlFor="hs-checkbox-archive" className="ms-3">
-      <span className="block text-sm font-semibold text-gray-800">Archive</span>
-      <span id="hs-checkbox-archive-description" className="block text-sm text-gray-600">Notify me when this action happens.</span>
-    </label>
-  </div>
-
-  <div className="relative flex items-start">
-    <div className="flex items-center h-5 mt-1">
-      <input id="hs-checkbox-archive" name="hs-checkbox-archive" type="checkbox" className="border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" aria-describedby="hs-checkbox-archive-description"/>
-    </div>
-    <label htmlFor="hs-checkbox-archive" className="ms-3">
-      <span className="block text-sm font-semibold text-gray-800">Archive</span>
-      <span id="hs-checkbox-archive-description" className="block text-sm text-gray-600">Notify me when this action happens.</span>
-    </label>
-  </div>
-</div>
-            </div>
-          </div>
+      <div className="container px-5 py-24 mx-auto">
+        <div className="flex flex-col text-center w-full mb-12">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">User Type</h1>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+            What Defines You The Best!.. This will help us to serve you better.
+          </p>
         </div>
+        <div className="flex flex-col items-center">
+          <select
+            value={userType}
+            onChange={(e) => setUserType(e.target.value)}
+            className="border rounded p-2 mb-4"
+          >
+            <option value="" disabled>Select your user type</option>
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Blogger">Blogger</option>
+            <option value="Freelancer">Freelancer</option>
+            <option value="Customer">Customer</option>
+          </select>
+          <button 
+            onClick={() => {
+              if (user) {
+                user.update({
+                  unsafeMetadata: {
+                    userType
+                  }
+                });
+              }
+            }} 
+            className="bg-blue-500 text-white p-2 rounded"
+          >
+            Update User Type
+          </button>
+        </div>
+        {userType && (
+          <div className="mt-8 text-center">
+            <h2 className="text-xl">You are a: <span className="font-bold">{userType}</span></h2>
+          </div>
+        )}
       </div>
-    </div>
-  </section>
-  )
-}
+    </section>
+  );
+};
 
-export default page
+export default Page;

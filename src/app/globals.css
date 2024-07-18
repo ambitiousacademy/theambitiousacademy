@@ -12,13 +12,13 @@
 
 /*--------------------------------------------- carousel CSS --------------------------------------------*/
 .header-container {
-  margin: 0.5% 5% 2% 5%;
-  position: relative;
+  margin: 0.5% auto 2% auto; /* Centered horizontally */
   width: 90%;
   max-width: 1200px;
   height: 100%;
   max-height: 300px;
-  align-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 1.7rem;
   overflow: hidden;
 }
@@ -29,12 +29,14 @@
 }
 
 .slide {
-  width: 100%;
+  flex: 0 0 100%; /* Ensure slides take full width and don't shrink */
   height: 300px;
-  background-size: cover ;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide-content {
@@ -67,8 +69,8 @@
 
 .nav-button {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 30%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,11 +87,39 @@
 }
 
 .nav-button.left {
-  left: 0;
+  left: 1rem; /* Adjust as needed for better responsiveness */
 }
 
 .nav-button.right {
-  right: 0;
+  right: 1rem; /* Adjust as needed for better responsiveness */
+}
+
+@media (max-width: 768px) {
+  .nav-button {
+    width: 3%; /* Adjust width for smaller screens */
+  }
+
+  .nav-button.left {
+    left: 0.5rem; /* Adjust for smaller screens */
+  }
+
+  .nav-button.right {
+    right: 0.5rem; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-button {
+    width: 4%; /* Adjust width for even smaller screens */
+  }
+
+  .nav-button.left {
+    left: 0.25rem; /* Adjust for smaller screens */
+  }
+
+  .nav-button.right {
+    right: 0.25rem; /* Adjust for smaller screens */
+  }
 }
 
 
@@ -314,4 +344,19 @@
   width: 1rem; /* Icon width */
   height: 1rem; /* Icon height */
   fill: currentColor; /* Use current text color for icon */
+}
+
+.ourteam-container{
+  margin: auto;
+  margin-bottom: 100px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ourteam-image{
+  margin-top: 2%;
+  height: 300px;
+  width: 400px;
+  border-radius: 5%;
 }

@@ -33,15 +33,9 @@ interface CourseDetails {
 
 export default function Dashboard() {
    const { isLoaded, isSignedIn, user } = useUser();
-   const [loading, setLoading] = useState(true); // Initialize loading state as true
+   const [loading, setLoading] = useState(false); // Initialize loading state as true
 
-   useEffect(() => {
-     const timer = setTimeout(() => {
-       setLoading(false); // Set loading to false after 5000ms (5 seconds)
-     }, 3000);
  
-     return () => clearTimeout(timer); // Clean up timer
-   }, []);
 
    const [coursedata, setCoursedata] = useState<ResponseData | null>(null);
 
